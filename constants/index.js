@@ -24,6 +24,7 @@ module.exports = {
   CLASSNAME_VAR: '{classname}',
   FILENAME_VAR: '{filename}',
   FILEPATH_VAR: '{filepath}',
+  FILEPATH_NO_EXT_VAR: '{filepathNoExt}',
   TITLE_VAR: '{title}',
   DISPLAY_NAME_VAR: '{displayName}',
 };

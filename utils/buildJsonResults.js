@@ -53,6 +53,7 @@ module.exports = function (report, appDirectory, options) {
     // Build replacement map
     let suiteReplacementMap = {};
     suiteReplacementMap[constants.FILEPATH_VAR] = filepath;
+    suiteReplacementMap[constants.FILEPATH_NO_EXT_VAR] = filepath.replace(/\.[^/.]+$/, '');
     suiteReplacementMap[constants.FILENAME_VAR] = filename;
     suiteReplacementMap[constants.TITLE_VAR] = suiteTitle;
     suiteReplacementMap[constants.DISPLAY_NAME_VAR] = displayName;
@@ -88,6 +89,7 @@ module.exports = function (report, appDirectory, options) {
       // Build replacement map
       let testReplacementMap = {};
       testReplacementMap[constants.FILEPATH_VAR] = filepath;
+      testReplacementMap[constants.FILEPATH_NO_EXT_VAR] = filepath.replace(/\.[^/.]+$/, '');
       testReplacementMap[constants.FILENAME_VAR] = filename;
       testReplacementMap[constants.CLASSNAME_VAR] = classname;
       testReplacementMap[constants.TITLE_VAR] = testTitle;
